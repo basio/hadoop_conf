@@ -1,0 +1,14 @@
+<configuration>
+<property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://graphsys-n00:9000</value>
+</property>
+
+<property>
+    <name>hadoop.tmp.dir</name>
+    <value>/disk1/hadoop/tmp</value>
+    <description>A base for other temporary directories.</description>
+</property>
+</configuration>
+
+
