@@ -21,10 +21,9 @@
 for HOST in graphsys-n01 graphsys-n02 graphsys-n03 graphsys-n04 graphsys-n05 graphsys-n06 graphsys-n07 graphsys-n08 graphsys-n09; do
 	ssh  -t  mkhalefa@$HOST " 
 		sudo rm -fr /usr/local/hadoop/etc/hadoop/*
-		sudo rm -fr /disk1/hadoop/mydata/hdfs/namenode
-		sudo rm -fr /disk1/hadoop/mydata/hdfs/datanode
-		sudo mkdir /disk1/hadoop/mydata/hdfs/datanode/current -p
-		sudo chown mkhalefa:mkhalefa /disk1/hadoop/mydata/hdfs/datanode/current -R
+		 rm -fr /disk1/hadoop/mydata/hdfs/datanode
+		 mkdir /disk1/hadoop/mydata/hdfs/datanode/current -p
+		#sudo chown mkhalefa:mkhalefa /disk1/hadoop/mydata/hdfs/datanode/current -R
 		sudo mkdir /disk2/hadoop/1/yarn/local -p
 		sudo mkdir /disk2/hadoop/1/yarn/log -p
 		sudo mkdir /disk2/hadoop/2/yarn/local -p
