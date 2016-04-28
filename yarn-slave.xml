@@ -17,15 +17,7 @@
       </property>
 <property>
     <name>hadoop.tmp.dir</name>
-    <value>/disk1/hadoop/</value>
+    <value>/disk1/hadoop/tmp/</value>
     <description>A base for other temporary directories.</description>
-</property>
-<property>
-<name>yarn.nodemanager.log-dirs</name>
-<value> file:///disk2/hadoop/1/yarn/log,file:///disk2/hadoop/2/yarn/log, file:///disk2/hadoop/3/yarn/log</value>
-</property>
-<property>
-<name>yarn.nodemanager.local-dirs</name>
-<value> file:///disk2/hadoop/1/yarn/local,file:///disk2/hadoop/2/yarn/local, file:///disk2/hadoop/3/yarn/local</value>
 </property>
 </configuration>
