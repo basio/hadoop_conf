@@ -3,15 +3,15 @@
 <configuration>
 <property>
     <name>dfs.replication</name>
-    <value>1</value>
+    <value>3</value>
 </property>
 <property>
     <name>dfs.namenode.name.dir</name>
     <value>file:/disk1/hadoop/mydata/hdfs/namenode</value>
 </property>
-
+<!--
 <property>
     <name>dfs.datanode.data.dir</name>
     <value>file:/disk1/hadoop/mydata/hdfs/datanode</value>
-</property>
+</property>-->
 </configuration>

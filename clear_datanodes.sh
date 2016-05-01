@@ -2,6 +2,8 @@
 		sudo rm -fr /disk1/hadoop/mydata/hdfs/namenode
 		sudo rm -fr /disk1/hadoop/mydata/hdfs/datanode
 		sudo rm -fr /disk1/hadoop/tmp/
+		sudo rm -fr /usr/local/hadoop/logs
+		mkdir /usr/local/hadoop/logs
 		 mkdir /disk1/hadoop/mydata/hdfs/namenode -p
 		#sudo chown mkhalefa:mkhalefa /disk1/hadoop/mydata/hdfs/namenode -R
 		 mkdir /disk1/hadoop/mydata/hdfs/datanode/current -p
@@ -27,6 +29,8 @@ for HOST in graphsys-n01 graphsys-n02 graphsys-n03 graphsys-n04 graphsys-n05 gra
 		 mkdir /disk1/hadoop/mydata/hdfs/datanode/current -p
 		sudo chown mkhalefa:mkhalefa /disk1/hadoop/mydata/ -R
 	        rm -fr /disk1/hadoop/tmp
+		sudo rm -fr /usr/local/hadoop/logs
+		mkdir /usr/local/hadoop/logs
 		mkdir /disk1/hadoop/tmp
 		sudo mkdir /disk2/hadoop/1/yarn/local -p
 		sudo mkdir /disk2/hadoop/1/yarn/log -p
