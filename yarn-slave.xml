@@ -20,4 +20,8 @@
     <value>/disk1/hadoop/tmp/</value>
     <description>A base for other temporary directories.</description>
 </property>
+<property>
+<name>yarn.nodemanager.resource.memory-mb</name>
+<value>20960</value>
+</property>
 </configuration>
