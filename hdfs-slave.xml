@@ -8,6 +8,6 @@
 
 <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:/disk1/hadoop/mydata/hdfs/datanode</value>
+    <value>file:/disk1/hdfs/datanode</value>
 </property>
 </configuration>

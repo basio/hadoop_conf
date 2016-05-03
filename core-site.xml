@@ -6,9 +6,22 @@
 
 <property>
     <name>hadoop.tmp.dir</name>
-    <value>/disk1/hadoop/tmp</value>
+    <value>/disk1/hadoop-tmp</value>
     <description>A base for other temporary directories.</description>
 </property>
+<property>
+    <name>hadoop.proxyuser.mapred.groups</name>
+    <value>*</value>
+    <description>Allows the mapreduser to move files belonging to users in these groups.</description>
+</property>
+
+<property>
+    <name>hadoop.proxyuser.mapred.hosts</name>
+    <value>*</value>
+    <descriptionAllows the mapreduser to move files belonging on these hosts.</description>
+</property>
+
+
 </configuration>
 
 

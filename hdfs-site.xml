@@ -7,11 +7,11 @@
 </property>
 <property>
     <name>dfs.namenode.name.dir</name>
-    <value>file:/disk1/hadoop/mydata/hdfs/namenode</value>
+    <value>file:/disk1/hdfs/namenode</value>
 </property>
 <!--
 <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:/disk1/hadoop/mydata/hdfs/datanode</value>
+    <value>file:/disk1/hdfs/datanode</value>
 </property>-->
 </configuration>
