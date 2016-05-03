@@ -7,7 +7,7 @@
 
 		for i in 1 2 3 
 		do
-			mkdir /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/log -p
+			mkdir /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/yarn/log -p
 			sudo chown mkhalefa:mkhalefa /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/yarn/log -R
 		done	
 for HOST in graphsys-n01 graphsys-n02 graphsys-n03 graphsys-n04 graphsys-n05 graphsys-n06 graphsys-n07 graphsys-n08 graphsys-n09; do
@@ -15,14 +15,15 @@ for HOST in graphsys-n01 graphsys-n02 graphsys-n03 graphsys-n04 graphsys-n05 gra
 		sudo rm -fr /usr/local/hadoop/etc/hadoop/*
 		sudo rm -fr /disk1/
 		sudo rm -fr /usr/local/hadoop/logs
-		mkdir /usr/local/hadoop/logs
+
+		mkdir /usr/local/hadoop/logs  
 		sudo mkdir -p /disk1/hadoop-tmp /disk1/hdfs/datanode
-		sudo chown mkhalefa:mkhalefa  /disk1/hadoop-tmp /disk1/hdfs/datanode 
+		sudo chown mkhalefa:mkhalefa  /disk1/hadoop-tmp /disk1/hdfs/datanode -R
 
 
 		for i in 1 2 3 
 		do
-			mkdir -p /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/log 
+			mkdir -p /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/yarn/log 
 			sudo chown mkhalefa:mkhalefa /disk2/hadoop/$i/yarn/local /disk2/hadoop/$i/yarn/log -R
 		done	
 	 	"
@@ -53,7 +54,7 @@ HADOOP_USER_NAME=mkhalefa hadoop fs -chmod -R 1777 /user/history
 HADOOP_USER_NAME=mkhalefa hadoop fs -chown mkhalefa:mkhalefa /user/history
 
 HADOOP_USER_NAME=mkhalefa hadoop fs -mkdir -p /var/log/hadoop-yarn
-HADOOP_USER_NAME=mkhalefa hadoop fs -chown mkhalefa:mkhalefa/var/log/hadoop-yarn
+HADOOP_USER_NAME=mkhalefa hadoop fs -chown mkhalefa:mkhalefa /var/log/hadoop-yarn
 
 
 head -n8000000 /data/twitter_rv.net >/data/twitter_rv.8m
@@ -64,9 +65,9 @@ hadoop fs -mkdir /twitter
 hadoop fs -mkdir /user
 hadoop fs -mkdir /output
 
-hadoop fs -copyFromLocal /data/twitter_rv.80m /twitter/sample10
+#hadoop fs -copyFromLocal /data/twitter_rv.80m /twitter/sample10
 hadoop fs -copyFromLocal /data/twitter_rv.8m /twitter/sample1
-hadoop fs -copyFromLocal /data/twitter_rv.net /twitter/data 
-stop-dfs.sh
+#hadoop fs -copyFromLocal /data/twitter_rv.net /twitter/data 
+#stop-dfs.sh
 
 
