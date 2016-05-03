@@ -18,7 +18,7 @@
 <property>
     <name>hadoop.proxyuser.mapred.hosts</name>
     <value>*</value>
-    <descriptionAllows the mapreduser to move files belonging on these hosts.</description>
+    <description>Allows the mapreduser to move files belonging on these hosts.</description>
 </property>
 
 
