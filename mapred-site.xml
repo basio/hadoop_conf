@@ -1,34 +1,16 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
+<!-- Put site-specific property overrides in this file. -->
+
 <configuration>
 <property>
-    <name>mapreduce.framework.name</name>
-    <value>yarn</value>
+  <name>mapred.job.tracker</name>
+  <value>graphsys-n00:54311</value>
+  <description>The host and port that the MapReduce job tracker runs
+  at.  If "local", then jobs are run in-process as a single map
+  and reduce task.
+  </description>
 </property>
-<property>
-    <name>mapreduce.jobhistory.address</name>
-    <value>graphsys-n00:10020</value>
-</property>
-
-<property>
-    <name>mapreduce.jobhistory.webapp.address</name>
-    <value>graphsys-n00:19888</value>
-</property>
-<property>
-    <name>yarn.app.mapreduce.am.staging-dir</name>
-    <value>/user</value>
-</property>
-
-<property>
-	<name>mapreduce.map.memory.mb</name>
-	<value>3072</value>
-</property>
-<property>
-	<name>mapreduce.map.java.opts</name>
-	<value>-Xmx2457m</value>
-</property>
-
-
 
 </configuration>

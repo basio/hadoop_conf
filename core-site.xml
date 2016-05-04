@@ -1,27 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
 <configuration>
 <property>
-    <name>fs.defaultFS</name>
-    <value>hdfs://graphsys-n00:9000</value>
+  <name>hadoop.tmp.dir</name>
+  <value>/disk1/hadoop-tmp</value>
+  <description>A base for other temporary directories.</description>
 </property>
 
 <property>
-    <name>hadoop.tmp.dir</name>
-    <value>/disk1/hadoop-tmp</value>
-    <description>A base for other temporary directories.</description>
+  <name>fs.default.name</name>
+  <value>hdfs://graphsys-n00:54310</value>
+  <description>The name of the default file system.  A URI whose
+  scheme and authority determine the FileSystem implementation.  The
+  uri's scheme determines the config property (fs.SCHEME.impl) naming
+  the FileSystem implementation class.  The uri's authority is used to
+  determine the host, port, etc. for a filesystem.</description>
 </property>
-<property>
-    <name>hadoop.proxyuser.mapred.groups</name>
-    <value>*</value>
-    <description>Allows the mapreduser to move files belonging to users in these groups.</description>
-</property>
-
-<property>
-    <name>hadoop.proxyuser.mapred.hosts</name>
-    <value>*</value>
-    <description>Allows the mapreduser to move files belonging on these hosts.</description>
-</property>
-
 
 </configuration>
-
-
