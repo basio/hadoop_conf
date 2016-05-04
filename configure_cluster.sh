@@ -24,6 +24,5 @@ for HOST in graphsys-n00 graphsys-n01 graphsys-n02 graphsys-n03 graphsys-n04 gra
 	scp hdfs-site.xml mkhalefa@$HOST:/usr/local/hadoop/conf
 	scp core-site.xml mkhalefa@$HOST:/usr/local/hadoop/conf
 	scp mapred-site.xml mkhalefa@$HOST:/usr/local/hadoop/conf
-	scp yarn-site.xml mkhalefa@$HOST:/usr/local/hadoop/conf
 done 
 
