@@ -2,7 +2,11 @@
 <property> <name>yarn.web-proxy.address</name>
 <value>graphsys-n00</value>
 </property>
-
+<property>
+  <name>yarn.nodemanager.pmem-check-enabled</name>
+    <value>false</value>
+     <description>Whether physical memory limits will be enforced for containers.</description>
+</property>
 <property>
 <name>yarn.resourcemanager.hostname</name>
 <value>graphsys-n00</value>
