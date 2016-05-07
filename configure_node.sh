@@ -4,6 +4,7 @@ for HOST in "$@"
 do
 	echo $HOST
 	ssh -t mkhalefa@$HOST "
+		sudo m -fr /disk1
 		rm -fr /home/mkhalefa/tmp_
 		mkdir /home/mkhalefa/tmp_
 		sudo chown mkhalefa:mkhalefa /home/mkhalefa/tmp_ -R 
@@ -20,7 +21,14 @@ do
 	  sudo chown mkhalefa:mkhalefa /usr/local/hadoop 
 	  sudo cp tmp_/iptables /etc/sysconfig/iptables
 	  sudo service iptables restart
+
+	   sudo rm -fr /disk1/	
+	   sudo mkdir -p /data/hadoop/ 
+	   sudo chown mkhalefa:mkhalefa  /data/  -R
+	   sudo rm -f /usr/local/hadoop/conf/slaves /usr/local/hadoop/conf/masters
+
 	"
 
 done 
+
 
